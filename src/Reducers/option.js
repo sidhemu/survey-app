@@ -38,8 +38,6 @@ export const optionList = (state = { index: [], optList: {} }, action) => {
 
       state.optList = { ...state.optList };
 
-      console.log('updated obj', state);
-
       return { ...state };
     default:
       return state;

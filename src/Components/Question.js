@@ -22,7 +22,7 @@ class Question extends Component {
       editStatus: true,
       option: '',
       optionArr: [],
-      displayOption: false,
+
       isTypeText: true
     };
 
@@ -36,14 +36,9 @@ class Question extends Component {
   addOptions() {
     const index = this.props.index;
     this.props.addQuesOptions(index);
-    this.setState(
-      {
-        optionArr: [...this.props.optionList.optList[index]]
-      },
-      () => {
-        this.setState({ displayOption: true });
-      }
-    );
+    this.setState({
+      optionArr: [...this.props.optionList.optList[index]]
+    });
   }
 
   handleChange(event) {
@@ -139,7 +134,7 @@ class Question extends Component {
               {this.state.optionArr.length > 0 ? (
                 <OptionList
                   questionIndex={this.props.index}
-                  optArr={this.state.optionArr}
+                  optArr={this.props.optionList.optList[qNum]}
                   optionType={this.state.option}
                   isEditable={true}
                 />
@@ -182,7 +177,7 @@ class Question extends Component {
               <p> Option</p>
               {this.state.optionArr.length > 0 ? (
                 <OptionList
-                  optArr={this.state.optionArr}
+                  optArr={this.props.optionList.optList[qNum]}
                   optionType={this.state.option}
                   isEditable={false}
                 />

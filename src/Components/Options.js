@@ -43,6 +43,7 @@ class OptionList extends Component {
                   <div>
                     <InputOption
                       questionIndex={this.props.questionIndex}
+                      optIndex={index}
                       data={elem}
                     />
                     <i
@@ -83,6 +84,7 @@ class OptionList extends Component {
                   <div>
                     <InputOption
                       questionIndex={this.props.questionIndex}
+                      optIndex={index}
                       data={elem}
                     />
                     <i

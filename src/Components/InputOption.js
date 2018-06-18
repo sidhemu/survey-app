@@ -18,7 +18,7 @@ class InputOption extends Component {
     this.setState({ optiontext: event.target.value }, () => {
       this.props.updateText(
         this.props.questionIndex,
-        this.props.data.id,
+        this.props.optIndex,
         this.state.optiontext
       );
     });
