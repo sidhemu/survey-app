@@ -1,0 +1,58 @@
+.question-card {
+  margin: 10px 0;
+}
+
+.card-title {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-title i {
+  cursor: pointer;
+  margin: 0 10px;
+}
+.card-text {
+  margin: 10px 0;
+}
+
+.select-type {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.option-area {
+  cursor: pointer;
+}
+
+.styled-select {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+.styled-select,
+.styled-select select {
+  cursor: pointer;
+  width: 150px;
+}
+select:focus {
+  outline: none;
+}
+.styled-select select {
+  height: 34px;
+  padding: 5px 0 5px 5px;
+  background: transparent;
+  border: none;
+
+  /*hide default down arrow in webkit */
+  -webkit-appearance: none;
+}
+
+.down-arrow {
+  position: absolute;
+  cursor: pointer;
+  top: 5px;
+  right: 5px;
+  font-size: 24px;
+}
